@@ -34,7 +34,7 @@ services:
   api:
     extends: 'worker-01'
     command: ['/usr/local/bin/node', 'bin/serve.js']
-    exclude_from_hc: true
+    exclude_from_hc: false
     healthcheck:
       test: ['CMD', 'curl', '-f', 'http://localhost:3000', '||', 'exit', '1']
       start_period: '5s'
