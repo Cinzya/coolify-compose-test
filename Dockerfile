@@ -13,6 +13,7 @@ RUN apk update && \
   adduser --system --uid 1001 $USER && \ 
   chmod +x /tini && chown $USER:$USER /tini
 USER $USER
+EXPOSE 3000
 ENTRYPOINT ["/tini", "--"]
 CMD ["node", "bin/serve.js"]
 
