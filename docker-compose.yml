@@ -17,7 +17,9 @@ services:
       options:
         max-size: '100k'
         max-file: 3
-    environment: *common-environment
+    environment:
+      <<: *common-environment
+      - SERVICE_FQDN_WRK_3000
 
   worker-02:
     extends: 'worker-01'
