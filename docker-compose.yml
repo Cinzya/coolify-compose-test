@@ -20,6 +20,7 @@ services:
     environment:
       <<: *common-environment
       - SERVICE_FQDN_WRK_3000
+      - TEST=$SERVICE_URL_WRK
 
   worker-02:
     extends: 'worker-01'
